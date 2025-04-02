@@ -1,0 +1,82 @@
+
+Summary:
+
+Academic engagement through active participation in instructional activities related to the course objectives is paramount to your success in this course and future courses.  Through interaction with your instructor and classmates, you will explore the course material and be provided with the best opportunity for objective and competency mastery.  To begin this class, review the course objectives for each Topic, and then answer the following questions as this will help guide your instructor for course instruction. 
+
+ 
+
+Which weekly objectives do you have prior knowledge of and to what extent?
+Which weekly objectives do you have no prior knowledge of?
+What course-related topics would you like to discuss with your instructor and classmates?  What questions or concerns do you have about this course? 
+
+I have had the opportunity to learn and work with the fundamental concepts covered in Topic 1: Introduction to Algorithms and Data Structures. These basics, including arrays, objects, and simple algorithms, have proven valuable for everyday tasks in JavaScript, such as manipulating the DOM and handling events. I’ve also encountered Topic 3: Brute Force and Exhaustive Search, which has helped me with tasks like filtering lists or searching through collections using straightforward methods.
+
+In addition, I have explored Topic 4: Divide and Conquer, where techniques such as merge sort and quick-sort have deepened my understanding of optimizing code performance. While I may not use these advanced methods daily, I appreciate how they contribute to more efficient programming practices. I remain eager to continue refining my skills and expanding my knowledge in these areas, knowing that there is always more to learn.
+
+I am mainly concerned about terminology as my math background stopped at college calculus. I use the term algorithm in past projects but I am often not confident I understand what it is at a fundamental level.
+
+---
+
+Class Introductions
+
+
+Take a moment to explore your new classroom and introduce yourself to your fellow classmates. What are you excited about learning? What do you think will be most challenging?
+
+My name is Joseph Abraham and I am based in Maui. I will be getting married to an immigrant from the phillipines in about two months. I am also a computer teacher at Pukalani Elementary here in Maui, Hawaii. I previously worked as a web developer, for most of my adult life. I also did a bit of software engineering.
+
+I've always talked about algos while working different jobs, but I still don't really feel like I know what the term means. I am hoping that this course will give me confidence in my future projects so I can be clear and concise in implementation and explination.
+
+
+
+---
+
+Topic 1
+
+Design an algorithm to find all the common elements in two sorted lists of numbers. For example, for the lists 2, 5, 5, 5 and 2, 2, 3, 5, 5, 7, the output should be 2, 5, 5. What is the maximum number of comparisons your algorithm makes if the lengths of the two given lists are m and n, respectively? 
+In the worst-case scenario, where there are no common elements between the two lists, the algorithm will make m+n comparisons. What other situations might cause the algorithm to make fewer comparisons? Can you think of any optimizations for reducing comparisons when the lists contain many duplicate elements or when the lists are very large? Would you consider using other data structures or techniques for optimization? How would that impact time complexity?
+
+---
+
+Topic 2
+
+This discussion explores two distinct algorithms. One concern solving a quadratic equation with real coefficients, and the other deals with finding the binary representation of a positive decimal integer.
+Tasks:
+1. Finding Real Roots of the Quadratic Equation ax2+bx+c=0:
+Pseudocode for the Algorithm:
+Write a pseudocode for the algorithm that finds the real roots of the quadratic equation ax2+bx+c=0, given the coefficients a, b, and c. You can assume the availability of the square root function sqrt(x).
+
+2. Finding the Binary Representation of a Positive Decimal Integer:
+Problem Definition:
+•    The task is to convert a positive decimal integer A into its binary equivalent. The binary representation of a number consists of only the digits 0 and 1.
+Pseudocode for the Algorithm:
+•    Write pseudocode for the binary conversion algorithm. The pseudocode should describe how to divide the number by 2 and store the remainders to build the binary representation.
+
+Discussion Points:
+•    Quadratic Equation Roots: Discuss why the discriminant plays such an important role in determining the number and type of real roots for a quadratic equation. How would your solution change if you needed to handle complex roots?
+•    Binary Representation: How can the binary representation of numbers be used in various applications, such as computer science or digital systems? Could you optimize the algorithm in any way for very large numbers?
+
+---
+
+Introduction
+
+The purpose of this assignment is to assess your ability to determine, design, and implement important problems using data structures.
+
+Design and implement an algorithm for checking whether two given words are anagrams (i.e., whether one word can be obtained by permuting the letters of the other). For example, the words "tea" and "eat" are anagrams. Your program should read two words from the user and return either true or false. 
+
+Note: Your program should be efficient, so check the string size first.
+
+Submit your pseudocode, your source code, and create a Loom video no longer than 3 minutes in which you run your program and offer a brief explanation of the logic for your program. 
+
+Use Loom to upload your completed video and ensure that your instructor can access and view your private, linked video prior to submitting it to the digital classroom.
+
+This assignment uses a rubric. Please review the rubric prior to beginning the assignment to become familiar with the expectations for successful completion.
+
+You are not required to submit this assignment to LopesWrite.
+
+---
+
+Quiz
+
+---
+
+Discussion

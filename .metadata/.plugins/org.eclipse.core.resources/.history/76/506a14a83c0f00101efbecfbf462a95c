@@ -1,0 +1,113 @@
+package app;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CommonElementsFinder {
+
+    /**
+     * Finds common elements in two sorted arrays using the two-pointer approach.
+     * In the worst-case scenario (no common elements), the algorithm makes m+n comparisons.
+     *
+     * @param list1 A sorted array of integers.
+     * @param list2 A sorted array of integers.
+     * @return A list of common elements.
+     */
+    public static List<Integer> findCommonElements(int[] list1, int[] list2) {
+        List<Integer> result = new ArrayList<>();
+        int i = 0, j = 0;
+        int comparisons = 0; // Counter for comparisons (for analysis purposes)
+
+        // Traverse both arrays until one pointer reaches the end.
+        while (i < list1.length && j < list2.length) {
+            comparisons++; // A comparison is made in each iteration.
+            if (list1[i] == list2[j]) {
+                // Found a common element.
+                result.add(list1[i]);
+                i++;
+                j++;
+            } else if (list1[i] < list2[j]) {
+                // Move pointer in list1 forward.
+                i++;
+            } else {
+                // Move pointer in list2 forward.
+                j++;
+            }
+        }
+        System.out.println("Total comparisons (basic approach): " + comparisons);
+        return result;
+    }
+
+    /**
+     * Finds common elements in two sorted arrays using the two-pointer approach with duplicate skipping.
+     * This optimization reduces comparisons by grouping consecutive duplicates.
+     *
+     * @param list1 A sorted array of integers.
+     * @param list2 A sorted array of integers.
+     * @return A list of common elements (including duplicates as appropriate).
+     */
+    public static List<Integer> findCommonElementsWithSkip(int[] list1, int[] list2) {
+        List<Integer> result = new ArrayList<>();
+        int i = 0, j = 0;
+        int comparisons = 0; // Counter for comparisons
+
+        while (i < list1.length && j < list2.length) {
+            comparisons++; // Counting the comparison at the start of the loop.
+            if (list1[i] == list2[j]) {
+                int common = list1[i];
+                
+                // Count duplicates in list1.
+                int count1 = 0;
+                while (i < list1.length && list1[i] == common) {
+                    count1++;
+                    i++;
+                }
+                
+                // Count duplicates in list2.
+                int count2 = 0;
+                while (j < list2.length && list2[j] == common) {
+                    count2++;
+                    j++;
+                }
+                
+                // Add the common element the minimum number of times it appears in both lists.
+                int occurrences = Math.min(count1, count2);
+                for (int k = 0; k < occurrences; k++) {
+                    result.add(common);
+                }
+            } else if (list1[i] < list2[j]) {
+                i++;
+            } else {
+                j++;
+            }
+        }
+        System.out.println("Total comparisons (duplicate skipping): " + comparisons);
+        return result;
+    }
+
+    public static void main(String[] args) {
+        // Example input arrays (sorted lists).
+        int[] list1 = {2, 5, 5, 5};
+        int[] list2 = {2, 2, 3, 5, 5, 7};
+
+        // Using the basic two-pointer approach.
+        System.out.println("Using basic two-pointer approach:");
+        List<Integer> commonElements = findCommonElements(list1, list2);
+        System.out.println("Common elements: " + commonElements);
+
+        // Using the duplicate skipping optimization.
+        System.out.println("\nUsing two-pointer approach with duplicate skipping:");
+        List<Integer> commonElementsWithSkip = findCommonElementsWithSkip(list1, list2);
+        System.out.println("Common elements: " + commonElementsWithSkip);
+
+        // Explanation of comparisons and optimizations.
+        System.out.println("\nIn the worst-case scenario (no common elements), the algorithm makes m+n comparisons.");
+        System.out.println("Fewer comparisons may occur when:");
+        System.out.println("- One list is exhausted early.");
+        System.out.println("- Many elements are common so both pointers advance together.");
+        System.out.println("- One list is significantly shorter than the other.");
+        System.out.println("\nOptimizations:");
+        System.out.println("- Skipping duplicates reduces redundant comparisons.");
+        System.out.println("- For very large or uneven lists, using binary search (O(m log n)) or a hash table (O(m+n) average) can be considered, though these may affect space usage or add logarithmic factors.");
+    }
+}
