@@ -4,15 +4,6 @@ import java.util.Scanner;
 
 public class AnagramChecker {
 
-    /**
-     * Checks whether two words are anagrams.
-     * Converts both words to lowercase (and removes spaces),
-     * then uses a frequency array (for letters 'a' to 'z') to compare letter counts.
-     *
-     * @param word1 The first word.
-     * @param word2 The second word.
-     * @return true if the words are anagrams, false otherwise.
-     */
     public static boolean areAnagrams(String word1, String word2) {
         // Normalize the words: convert to lowercase and remove spaces.
         word1 = word1.toLowerCase().replaceAll("\\s+", "");
