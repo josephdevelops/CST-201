@@ -24,3 +24,19 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 
 !ENTRY ch.qos.logback.classic 1 0 2025-04-08 11:17:13.031
 !MESSAGE Logback config file: /Users/Abraham/CST-201/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.0.20241001-1350.xml
+!SESSION 2025-04-25 14:04:31.882 -----------------------------------------------
+eclipse.buildId=4.34.0.20241128-0756
+java.version=23.0.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Abraham/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Abraham/.eclipse_keyring
+
+!ENTRY ch.qos.logback.classic 1 0 2025-04-25 14:04:36.985
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.core.resources 2 10035 2025-04-25 14:04:44.247
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY ch.qos.logback.classic 1 0 2025-04-25 14:04:45.026
+!MESSAGE Logback config file: /Users/Abraham/CST-201/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.0.20241001-1350.xml
